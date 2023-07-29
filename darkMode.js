@@ -35,13 +35,18 @@ console.log(NavLinks);
 
 function darkMode(e){
 
-    e.classList.toggle('text-black');
+    // e.classList.toggle('text-black');
+    // e.classList.toggle('text-yellow-400');
+
+    e.classList.toggle('md:text-white');
     e.classList.toggle('text-yellow-400');
     
     // Nav Links
 
     brandName.classList.toggle('text-white');
     brandName.classList.toggle('text-gray-400');
+
+    
     
     // Nav Links color Above md:
     NavLinks.classList.toggle('md:text-white');
