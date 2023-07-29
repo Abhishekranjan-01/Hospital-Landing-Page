@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Landing Page</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+
+    <!-- Font-Awesome CDN -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts - CDN -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Hamburger ICON CDN -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Functionality for Hamburger-Menu -->
+    <script src="./script.js" defer></script>
+
+    <!-- Some Classes For Dark Mode -->
+
+    <link rel="stylesheet" href="./darkMode.css">
+    
+    <!-- Functionality for Dark Mode -->
+    <script src="./darkMode.js" defer></script>
+
+
+</head>
+<body class="  font-['Poppins','sans-serif'] bg-black ">
+    <!-- Main -->
+    <main class=" md:mix-blend-difference flex justify-center h-full w-full ">
+        <img class="absolute w-full sm:h-full md:h-full -z-10" src="./assets/background.png" alt="Backgrond Image">
+       <!-- Nav-Bar -->
+        <nav class="fixed flex w-full md:w-4/5 min-[840px]:gap-1 lg:gap-x-14 md:my-4 h-fit z-10 ">
+
+        <!-- Col-1 -->
+        <div class="items-end h-fit w-fit">
+            <h1 data-brand-name="brand-name" class="md:block hidden text-white text-2xl lg:text-3xl font-semibold">
+                BrandName
+            </h1>
+
+            <ion-icon data-menu="Hamburger-Button" class="text-black block md:hidden text-3xl px-2 z-10" name="menu" onclick="Menu(this)"></ion-icon>
+
+        </div>
+        <!-- Col-2 -->
+        <ul data-nav_links="nav_links" class=" text-black md:text-white bg-gray-200 md:bg-transparent text-base lg:text-lg h-screen md:h-fit w-[45vw] md:w-fit absolute md:static opacity-100 hidden md:flex justify-evenly items-center md:items-end flex-col md:flex-row -z-10 ">
+
+            <li class="px-2 lg:px-3 w-full text-center"><a class="block font-semibold md:font-normal border-b-2 border-dashed border-black md:border-none w-full" href="#"> Home</a></li>
+
+            <li class="px-2 lg:px-3 w-full text-center"><a class="block font-semibold md:font-normal border-b-2 border-dashed border-black md:border-none w-full" href="#"> Product</a></li>
+            
+            <li class="px-2 lg:px-3 w-full text-center"><a class="block font-semibold md:font-normal border-b-2 border-dashed border-black md:border-none w-full" href="#"> Pricing</a></li>
+            
+            <li class="px-2 min-[800px]:px-3 w-full text-center "><a class="block font-semibold md:font-normal border-b-2 border-dashed border-black md:border-none w-full" href="#"> Contact</a></li>
+
+            <i class="fa-solid fa-sun fa-xl text-white cursor-pointer self-center" onclick="darkMode(this)"></i>
+        
+        </ul>
+        
+        
+        <button class="bg-sky-400 text-xs md:text-base py-1.5 px-3 md:px-3 md:py-1.5 lg:px-7 lg:py-3 text-white font-semibold rounded-lg absolute right-0 mx-1 my-1 md:my-0 md:mx-0">Get&nbsp;Quote&nbsp;Now&nbsp;<i class="fa-solid fa-arrow-right fa-sm md:ml-1 lg:ml-3 z-50" style="color: #ffffff;"></i></button>
+
+        
+        </nav>
+
+        <!-- Hero-Section -->
+
+        <div class="flex flex-col justify-between items-center md:flex-row gap-10 md:gap-0 w-4/5 h-full md:min-h-[650px] ">
+            <!-- Col-1 -->
+            <div class="flex flex-col gap-4 md:gap-10 justify-center items-center mt-12 sm:mt-12 lg:w-2/4 md:mt-36">
+                <!--N- Col-1 -->
+                <h1 data-main-heading="data-main-heading" class="sm:self-auto text-xl sm:text-3xl md:text-4xl lg:text-6xl text-white font-bold">Meet the Best Hospital</h1>
+
+                <!-- Col-2 -->
+                <h2 class="text-white text-sm sm:text-base md:text-lg leading-none">
+                    We know how large objects will act, but things on a small scale.
+                </h2>
+                
+                <!-- Col-3 -->
+                <div class="flex md:self-start gap-3 ">
+                    <button class="bg-sky-400  text-white font-semibold rounded-3xl px-4 py-2 md:px-8 md:py-4">Get&nbsp;quote&nbsp;Now</button>
+
+                    <button class="bg-transparent text-white font-semibold rounded-3xl px-4 py-2 md:px-8 md:py-4 border border-white">Learn&nbsp;More</button>
+                </div>
+
+            </div>
+
+            <!-- Col-2 -->
+            <div class=" flex flex-col items-end justify-center h-full">
+                <form class="bg-gray-100 flex flex-col px-6 w-full md:mt-20 rounded-xl" action="">
+
+                    <h1 class="text-gray-900 text-center text-semibold text-2xl font-semibold w-full mt-9 mb-4">Book Appointment</h1>
+
+                    <!-- Name -->
+                    <label class="text-gray-900 font-semibold w-4/5 my-2" for="Name">Name*</label>
+                    
+                    <input class="py-2 px-4 rounded-lg bg-gray-200" type="text" name="Name" placeholder="Full Name*">
+                
+                <!-- Email-Address -->
+
+                <label class=" text-gray-900 block font-semibold w-full my-2" for="Email">Email address*</label>
+                    
+                <input class="py-2 px-4 rounded-lg bg-gray-200" class="w-full" type="email" name="Email" placeholder="example@gmail.com">
+
+                <!-- Department -->
+
+                <label class=" text-gray-900 block font-semibold w-full my-2" for="Department">Department*</label>
+
+                <select class="py-2 px-4 rounded-lg bg-gray-200" name="Department" id="Department">
+                    <option value="">-- Please Select --</option>
+
+                    <option value="Genral Medicine">Genral Medicine</option>
+                    <option value="Pathology">Pathology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Gynaecology">Gynaecology</option>
+                    <option value="Orthopedics">Orthopedics</option>
+                    <option value="Anesthesisology">Anesthesisology</option>
+                    <option value="Cardiology">Cardiology</option>
+                </select>
+
+                <!-- Time -->
+
+                <label class=" text-gray-900 block font-semibold w-full my-2" for="Department">Time*</label>
+
+                <select class="py-2 px-4 rounded-lg bg-gray-200" name="Time" id="Department">
+                    <option value="">-- Please Select --</option>
+
+                    <option value="09:00 AM">09:00 AM Available</option>
+                    <option value="10:00 AM">10:00 AM Available</option>
+                    <option value="11:00 AM">11:00 AM Available</option>
+                    <option value="12:00 PM">12:00 PM Available</option>
+                    <option value="02:00 PM">02:00 PM Available</option>
+                    <option value="03:00 PM">03:00 PM Available</option>
+                    <option value="04:00 PM">04:00 PM Available</option>
+                </select>
+
+                <button class="bg-sky-400 text-white font-semibold w-full py-2 px-4 my-8 rounded-lg">Book Appointment</button>
+
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Heading Section (Leading-Medicine) -->
+    <section class="bg-white flex justify-center flex-col gap-20 pb-14 pt-24 md:pt-16 px-5">
+        <!-- Leading Medicine -->
+        <div class="md:mt-10 flex justify-center flex-col gap-5 items-center px-5 md:px-0">
+            <h1 class="text-2xl lg:text-3xl text-center font-semibold text-gray-900">Leading Medicine</h1>
+
+            <p class="text-center text-sm md:text-base text-gray-500 md:w-2/5">Problems trying the conflict between the two major realms of Classical physics Newtonian mechanics</p>
+            
+        </div>
+
+        <!-- Card Section -->
+
+        <div data-features-cards="features-cards" class="flex justify-center items-center flex-col md:flex-row gap-4">
+           
+            <!-- Card-1 -->
+            <div class=" bg-white border rounded-lg w-fit text-sm md:text-base text-gray-500 hover:text-gray-700 hover:scale-105 shadow-md hover:shadow-lg transition-all ease-in duration-200 ">
+                <!-- Part-1 (blue) -->
+                <div class="bg-blue-400 px-6 py-5 flex rounded-md
+                flex-row gap-5">
+                    <div class="bg-white p-3 rounded-full min-w-[48px] max-w-[72px]"><img class=" w-full" src="https://cdn4.iconfinder.com/data/icons/zake-miscellaneous-007/64/people_user_friends_community-256.png" alt="users">
+                    </div>
+                    <h2 class="self-center font-bold text-white">Emergency Case</h2>
+                </div>
+                <!-- Part-2 (About-Features) -->
+                <div>
+                    <ul class=" font-semibold flex flex-col gap-2 px-8 py-8 rounded-md border border-sky-200 ">
+                        <li class="before:content-['-'] -indent-3"> The best products start with Figma</li>
+                        <li class="before:content-['-'] -indent-3"> Design with real data</li>
+                        <li class="before:content-['-'] -indent-3"> Lightning fast prototype</li>
+                        <li class="before:content-['-'] -indent-3"> Fastest way to organize</li>
+                        <li class="before:content-['-'] -indent-3"> Work at the speed of thought</li>
+
+                        <li class="mt-2 "><a class="text-blue-500  hover:text-blue-600" href="#"> Learn More</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+               <!-- Card-2 -->
+               <div class="bg-white border rounded-lg w-fit text-sm md:text-base text-gray-500 hover:text-gray-700 hover:scale-105 shadow-md hover:shadow-lg transition-all ease-in duration-200 ">
+                <!-- Part-1 (blue) -->
+                <div class="bg-blue-400 px-6 py-5 flex rounded-md
+                flex-row gap-5">
+                    <div class="bg-white p-3 rounded-full min-w-[48px] max-w-[72px]"><img class="w-full" src="https://cdn4.iconfinder.com/data/icons/zake-miscellaneous-007/64/people_user_friends_community-256.png" alt="users">
+                    </div>
+                    <h2 class="self-center font-bold text-white">Emergency Case</h2>
+                </div>
+                <!-- Part-2 (About-Features) -->
+                <div>
+                    <ul class="font-semibold flex flex-col gap-2 px-8 py-8 rounded-md border border-sky-200">
+                        <li class="before:content-['-'] -indent-3"> The best products start with Figma</li>
+                        <li class="before:content-['-'] -indent-3"> Design with real data</li>
+                        <li class="before:content-['-'] -indent-3"> Lightning fast prototype</li>
+                        <li class="before:content-['-'] -indent-3"> Fastest way to organize</li>
+                        <li class="before:content-['-'] -indent-3"> Work at the speed of thought</li>
+
+                        <li class="mt-2"><a class="text-blue-500  hover:text-blue-600" href="#">Learn More</a></li>
+                    </ul>
+                </div>
+            </div>
+                
+
+
+               <!-- Card-3 -->
+               <div class="bg-white border rounded-lg w-fit text-sm md:text-base text-gray-500 hover:text-gray-700 hover:scale-105 shadow-md hover:shadow-lg transition-all ease-in duration-200 ">
+                <!-- Part-1 (blue) -->
+                <div class="bg-blue-400 px-6 py-5 flex rounded-md
+                flex-row gap-5">
+                    <div class="bg-white p-3 rounded-full min-w-[48px] max-w-[72px]"><img class="w-full" src="https://cdn4.iconfinder.com/data/icons/zake-miscellaneous-007/64/people_user_friends_community-256.png" alt="users">
+                    </div>
+                    <h2 class="self-center font-bold text-white">Emergency Case</h2>
+                </div>
+                <!-- Part-2 (About-Features) -->
+                <div>
+                    <ul class="font-semibold flex flex-col gap-2 px-8 py-8 rounded-md border border-sky-200">
+                        <li class="before:content-['-'] -indent-3"> The best products start with Figma</li>
+                        <li class="before:content-['-'] -indent-3"> Design with real data</li>
+                        <li class="before:content-['-'] -indent-3"> Lightning fast prototype</li>
+                        <li class="before:content-['-'] -indent-3"> Fastest way to organize</li>
+                        <li class="before:content-['-'] -indent-3"> Work at the speed of thought</li>
+
+                        <li class="mt-2"><a class="text-blue-500 hover:text-blue-600" href="#">Learn More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Again Heading Section (Leading-Medicine) & (Review Seciton)-->
+
+    <section  class="bg-white flex justify-center flex-col gap-20 pt-24 md:pt-16 px-5 py-14">
+        <!-- Heading & Caption -->
+        <div class="md:mt-10 flex justify-center flex-col gap-5 items-center px-5 md:px-0">
+            <h1 class="text-2xl lg:text-3xl text-center font-semibold text-gray-900">Leading Medicine</h1>
+
+            <p class="text-center text-sm md:text-base text-gray-500 md:w-2/5">Problems trying the conflict between the two major realms of Classical physics Newtonian mechanics</p>
+            
+        </div>
+
+        <!-- Card-Section -->
+
+        <div data-review-section="review-section" class=" flex justify-center items-center flex-col md:flex-row gap-4 py-4">
+            
+            <!-- Card-1 -->
+            <div class="bg-white shadow-lg hover:shadow-xl flex flex-col gap-5 border rounded-lg w-fit md:w-1/4 px-6 py-6 text-gray-500 text-sm md:text-base  font-semibold hover:text-gray-700 hover:scale-105 transition-all ease-in duration-200 ">
+                <img class="w-28 " src="https://t3.ftcdn.net/jpg/05/40/06/92/240_F_540069216_AiqmGY0nEt8IhFgjIoCG11IVQG3IoobK.jpg" alt="Rating-Stars">
+            
+                <p>Slate Helps you see how many more days you need to work to reach your financial goal.</p>
+
+                <img class="w-10" src="./assets/user1.png" alt="User-1">
+             
+            </div>
+
+
+              <!-- Card-2 -->
+              <div class="bg-white shadow-lg hover:shadow-xl flex flex-col gap-5 border rounded-lg w-fit md:w-1/4 px-6 py-6 text-gray-500 text-sm md:text-base  font-semibold hover:text-gray-700 hover:scale-105 transition-all ease-in duration-200 ">
+                <img class="w-28 " src="https://t3.ftcdn.net/jpg/05/40/06/92/240_F_540069216_AiqmGY0nEt8IhFgjIoCG11IVQG3IoobK.jpg" alt="Rating-Stars">
+            
+                <p>Slate Helps you see how many more days you need to work to reach your financial goal.</p>
+
+                <img class="w-10" src="./assets/user2.png" alt="User-1">
+             
+            </div>
+
+
+              <!-- Card-3 -->
+              <div class="bg-white shadow-lg hover:shadow-xl flex flex-col gap-5 border rounded-lg w-fit md:w-1/4 px-6 py-6 text-gray-500 text-sm md:text-base  font-semibold hover:text-gray-700 hover:scale-105 transition-all ease-in duration-200 ">
+                <img class="w-28 " src="https://t3.ftcdn.net/jpg/05/40/06/92/240_F_540069216_AiqmGY0nEt8IhFgjIoCG11IVQG3IoobK.jpg" alt="Rating-Stars">
+            
+                <p>Slate Helps you see how many more days you need to work to reach your financial goal.</p>
+
+                <img class="w-10" src="./assets/user3.png" alt="User-1">
+             
+            </div>
+        
+        </div>
+    </section>
+
+    <!-- FAQ CAPTION Section -->
+
+    <section class="bg-white flex justify-center flex-col gap-20 pt-24 md:pt-16 px-5 pb-20 ">
+
+         <!-- Heading & Caption -->
+         <div class="md:mt-10 flex justify-center flex-col gap-5 items-center px-5 md:px-0">
+            <h1 class="text-2xl lg:text-3xl text-center font-semibold text-gray-900">FAQ</h1>
+
+            <p class="text-center text-sm md:text-base text-gray-500 md:w-2/5">Problems trying the conflict between the two major realms of Classical physics Newtonian mechanics</p>
+            
+        </div>
+
+        <!-- Card-section -->
+
+        
+        <div data-faq-card="Faq-Cards" class="flex flex-wrap flex-col md:flex-row justify-center items-center gap-x-20 gap-y-14">
+            
+            <!-- Card-1 -->
+            <div class="flex flex-col gap-1  md:w-1/4 md:max-w-[280px] rounded-lg">
+                <div class="flex flex-row gap-4">
+                    <i class="fa-light fa-greater-than fa-2xl mt-3" style="color: #26d2fd;"></i>    
+
+                    <h2 class="font-semibold self-start">the quick fox jumps over the lazy dog</h2>
+                </div>
+                
+
+                <p class="font-semibold  text-gray-500 ml-9">Things on a very small scale behave like nothing</p>
+            
+            </div>
+
+        
+
+            <!-- Card-2 -->
+        
+            <div class="flex flex-col gap-1  md:w-1/4 md:max-w-[280px] rounded-lg">
+                <div class="flex flex-row gap-4">
+                    <i class="fa-light fa-greater-than fa-2xl mt-3" style="color: #26d2fd;"></i>    
+                    <h2 class="font-semibold self-start">the quick fox jumps over the lazy dog</h2>
+                </div>
+
+                <p class="font-semibold text text-gray-500 ml-9">Things on a very small scale behave like nothing</p>
+            </div>
+
+            <!-- Card-3 -->
+
+            <div class="flex flex-col gap-1  md:w-1/4 md:max-w-[280px] rounded-lg">
+                <div class="flex flex-row gap-4">
+                    <i class="fa-light fa-greater-than fa-2xl mt-3" style="color: #26d2fd;"></i>    
+                    <h2 class="font-semibold self-start">the quick fox jumps over the lazy dog</h2>
+                </div>
+
+                <p class="font-semibold text text-gray-500 ml-9">Things on a very small scale behave like nothing</p>
+            </div>
+
+    
+
+            <!-- Card-4 -->
+        
+            <div class="flex flex-col gap-1  md:w-1/4 md:max-w-[280px] rounded-lg">
+                <div class="flex flex-row gap-4">
+                    <i class="fa-light fa-greater-than fa-2xl mt-3" style="color: #26d2fd;"></i>    
+                    <h2 class="font-semibold self-start">the quick fox jumps over the lazy dog</h2>
+                </div>
+
+                <p class="font-semibold text text-gray-500 ml-9">Things on a very small scale behave like nothing</p>
+            </div>
+
+        
+
+            <!-- Card-5 -->
+        
+            <div class="flex flex-col gap-1  md:w-1/4 md:max-w-[280px] rounded-lg">
+                <div class="flex flex-row gap-4">
+                    <i class="fa-light fa-greater-than fa-2xl mt-3" style="color: #26d2fd;"></i>    
+                    <h2 class="font-semibold self-start">the quick fox jumps over the lazy dog</h2>
+                </div>
+
+                <p class="font-semibold text text-gray-500 ml-9">Things on a very small scale behave like nothing</p>
+            </div>
+
+       
+
+            <!-- Card-6 -->
+        
+            <div class="flex flex-col gap-1  md:w-1/4 md:max-w-[280px] rounded-lg">
+                <div class="flex flex-row gap-4">
+                    <i class="fa-light fa-greater-than fa-2xl mt-3" style="color: #26d2fd;"></i>    
+                    <h2 class="font-semibold self-start">the quick fox jumps over the lazy dog</h2>
+                </div>
+
+                <p class="font-semibold text text-gray-500 ml-9">Things on a very small scale behave like nothing</p>
+            </div>
+
+    
+
+            <!-- Card-7 -->
+        
+            <div class="flex flex-col gap-1  md:w-1/4 md:max-w-[280px] rounded-lg">
+                <div class="flex flex-row gap-4">
+                    <i class="fa-light fa-greater-than fa-2xl mt-3" style="color: #26d2fd;"></i>    
+                    <h2 class="font-semibold self-start">the quick fox jumps over the lazy dog</h2>
+                </div>
+
+                <p class="font-semibold text text-gray-500 ml-9">Things on a very small scale behave like nothing</p>
+            </div>
+
+    
+
+            <!-- Card-8 -->
+        
+            <div class="flex flex-col gap-1  md:w-1/4 md:max-w-[280px] rounded-lg">
+                <div class="flex flex-row gap-4">
+                    <i class="fa-light fa-greater-than fa-2xl mt-3" style="color: #26d2fd;"></i>    
+                    <h2 class="font-semibold self-start">the quick fox jumps over the lazy dog</h2>
+                </div>
+
+                <p class="font-semibold text text-gray-500 ml-9">Things on a very small scale behave like nothing</p>
+            </div>
+
+        
+
+            <!-- Card-9 -->
+        
+            <div class="flex flex-col gap-1  md:w-1/4 md:max-w-[280px] rounded-lg">
+                <div class="flex flex-row gap-4">
+                    <i class="fa-light fa-greater-than fa-2xl mt-3" style="color: #26d2fd;"></i>    
+                    <h2 class="font-semibold self-start">the quick fox jumps over the lazy dog</h2>
+                </div>
+
+                <p class="font-semibold text text-gray-500 ml-9">Things on a very small scale behave like nothing</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Pricing Section -->
+
+    <section class="bg-white flex justify-center flex-col gap-20 pt-24 md:pt-16 px-5 py-14">
+
+         <!-- Heading & Caption -->
+         <div class="md:mt-10 flex justify-center flex-col gap-5 items-center px-5 md:px-0">
+            <h1 class="text-2xl lg:text-3xl text-center font-semibold text-gray-900">Pricing</h1>
+
+            <p class="text-center text-sm md:text-base text-gray-500 md:w-2/5">Problems trying the conflict between the two major realms of Classical physics Newtonian mechanics</p>
+            
+        </div>
+
+        <!-- Card Section -->
+
+        <div class="flex justify-center items-center flex-col md:flex-row gap-4 py-4">
+
+            <!-- Card-1 -->
+
+            <div data-pricing_cards="pricing_cards" class="bg-white border-2 rounded-lg px-5 md:px-8 py-9 border-sky-300 text-gray-900 hover:text-gray-200 hover:bg-gray-700 hover:scale-105 transition-all ease-in duration-200">
+                
+                <!-- Part-1 (Caption & Pricing) -->
+                <div class="flex justify-center items-center flex-col gap-7">
+                    <h2 class="text-gray-900  text-3xl font-semibold ">FREE</h2>
+
+                    <h3 class="text-gray-500 font-semibold text-center w-4/6">organize across all apps by hand</h3>
+
+                    <div class="flex">
+                        <h2 class="text-5xl text-sky-500 font-semibold">0</h2>
+                        
+                        <div class="flex flex-col">
+                            <sup class="text-lg font-bold text-sky-500 ml-3 mt-1">$</sup><sub class="text-sky-300 text-base font-semibold ml-3 relative -top-2">Per Month</sub>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                    <!-- Part-2 (List_Items - 'Featues Users Will Get) -->
+
+                    <ul class=" flex flex-col gap-5 my-10 ">
+                       
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">Unlimited Product Updates</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold  text-sm md:text-base">Unlimited Product Updates</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold  text-sm md:text-base">Unlimited Product Updates</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #979797;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">1GB Cloud Storage</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #979797;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">Email and community support</h4>
+                        </li>
+
+                        <button class="bg-sky-400 font-semibold w-full py-4 mt-5 rounded-lg self-center text-gray-200 hover:text-white hover:bg-sky-500 transition-all duration-200 ease-in">Try for free</button>
+                    </ul>
+
+                
+                </div>
+
+
+             <!-- Card-2 -->
+
+                <div data-pricing_cards="pricing_cards" class="bg-white border-2 rounded-lg px-5 md:px-8 py-9 border-sky-300 hover:text-gray-200 hover:bg-gray-700 hover:scale-105 transition-all ease-in duration-200">
+                
+                <!-- Part-1 (Caption & Pricing) -->
+                    <div class="flex justify-center items-center flex-col gap-7">
+                        <h2 class="text-gray-900 text-3xl font-semibold ">FREE</h2>
+
+                        <h3 class="text-gray-500 font-semibold text-center w-4/6">organize across all apps by hand</h3>
+
+                        <div class="flex">
+                            <h2 class="text-5xl text-sky-500 font-semibold">9.99</h2>
+                        
+                            <div class="flex flex-col">
+                            <sup class="text-lg font-bold text-sky-500 ml-3 mt-1">$</sup><sub class="text-sky-300 text-base font-semibold ml-3 relative -top-2">Per Month</sub>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                    <!-- Part-2 (List_Items - 'Featues Users Will Get) -->
+
+                    <ul class="flex flex-col gap-5 my-10 ">
+                       
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold  text-sm md:text-base">Unlimited Product Updates</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold  text-sm md:text-base">Unlimited Product Updates</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">Unlimited Product Updates</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">1GB Cloud Storage</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #979797;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">Email and community support</h4>
+                        </li>
+
+                        <button class="bg-sky-400 font-semibold w-full py-4 mt-5 rounded-lg self-center text-gray-200 hover:text-white hover:bg-sky-500 transition-all duration-200 ease-in">Try for free</button>
+                    </ul>
+
+                
+            </div>
+            
+
+            <!-- Card-3 -->
+
+            <div data-pricing_cards="pricing_cards" class="bg-white border-2 rounded-lg px-5 md:px-8 py-9 border-sky-300 hover:text-gray-200 hover:bg-gray-700 hover:scale-105 transition-all ease-in duration-200">
+                
+                <!-- Part-1 (Caption & Pricing) -->
+                    <div class="flex justify-center items-center flex-col gap-7">
+                        <h2 class="text-gray-900 text-3xl font-semibold">FREE</h2>
+
+                        <h3 class="text-gray-500 font-semibold text-center w-4/6">organize across all apps by hand</h3>
+
+                        <div class="flex">
+                            <h2 class="text-5xl text-sky-500 font-semibold">19.99</h2>
+                        
+                            <div class="flex flex-col">
+                            <sup class="text-lg font-bold text-sky-500 ml-3 mt-1">$</sup><sub class="text-sky-300 text-base font-semibold ml-3 relative -top-2">Per Month</sub>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                    <!-- Part-2 (List_Items - 'Featues Users Will Get) -->
+
+                    <ul class="flex flex-col gap-5 my-10 ">
+                       
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">Unlimited Product Updates</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold  text-sm md:text-base">Unlimited Product Updates</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">Unlimited Product Updates</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">1GB Cloud Storage</h4>
+                        </li>
+
+                        <li class=" flex gap-2 h-full flex-row">
+                            <i class="fa-sharp fa-solid fa-circle-check fa-2xl  h-fit self-center" style="color: #37b346;"></i>
+                        
+                            <h4 class="font-semibold text-sm md:text-base">Email and community support</h4>
+                        </li>
+
+                        <button class="bg-sky-400 font-semibold w-full py-4 mt-5 rounded-lg self-center text-gray-200 hover:text-white hover:bg-sky-500 transition-all duration-200 ease-in ">Try for free</button>
+                    </ul>
+
+                
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Subscribe-Section -->
+
+    <section data-subscribe-section="subscirbe_section" class="bg-gray-800 flex flex-col md:flex-row justify-evenly justify-items-center items-center gap-20 py-14 md:mix-blend-difference" >
+
+        <!-- Col-1 -->
+        <div class=" w-3/5 md:w-[37%]">
+            <h1 class="text-gray-200  md:text-left text-center text-2xl md:text-3xl font-semibold ">Get In Touch</h1>
+            <p class="text-gray-200 text-center md:text-left">The gradual accumulation of information about atomic and small-scale behaviour during the first quarter of the 20th</p>
+        </div>
+
+        <!-- Col-2 -->
+
+        <div class="">
+            <input type="email" name="email" placeholder="Your Email" class="px-2 py-2 rounded-md outline-none">
+
+            <button class="rounded-md px-2 -m-1 py-2 bg-sky-400 text-gray-200 hover:bg-sky-500 hover:text-white transition-all ease-in duration-200">Subscribe</button>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+
+    <section data-footer="footer" class="bg-white flex justify-center flex-col gap-20 px-5 py-14">
+
+        <div class="flex md:justify-evenly flex-col gap-5 md:gap-0 md:flex-row px-5 md:px-0">
+
+            <!-- Col-1 -->
+            <div class="flex flex-col gap-7">
+                <h1 class="text-gray-900 font-bold text-2xl">
+                    Get In Touch
+                </h1>
+
+                <p class="text-gray-900 font-semibold md:w-4/5">The quick fox jumps over the lazy dog</p>
+
+                <div class="flex flex-row gap-5">
+                    <i class="fa-brands fa-facebook fa-xl text-sky-400" ></i>
+
+                    <i class="fa-brands fa-instagram fa-xl text-sky-400"></i>
+
+                    <i class="fa-brands fa-twitter fa-xl text-sky-400"></i>
+
+                </div>
+            </div>
+
+            <!-- Col-2 -->
+            <div class="flex flex-col max-sm:mt-4 gap-1 md:gap-5">
+                <h1 class="text-gray-900 font-bold text-2xl">
+                    Company info
+                </h1>
+
+                <ul class="flex flex-col gap-1 md:gap-5">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Carrier</a> </li>
+                    <li><a href="#">We are hiring</a> </li>
+                    <li><a href="#">Blog</a> </li>
+                </ul>
+                
+            </div>
+
+             <!-- Col-3 -->
+             <div class="flex flex-col gap-1 md:gap-5">
+                <h1 class="text-gray-900 font-bold text-2xl">
+                    Features
+                </h1>
+
+                <ul class="flex flex-col gap-1 md:gap-5">
+                    <li><a href="#">Business Marketing</a></li>
+                    <li><a href="#">User Analytic</a> </li>
+                    <li><a href="#">Live Chat</a> </li>
+                    <li><a href="#">Unlimited Support</a> </li>
+                </ul>
+                
+            </div>
+
+            <!-- Col-4 -->
+            <div  class="flex flex-col gap-5">
+                <h1 class="text-gray-900 font-bold text-2xl">
+                    Resources
+                </h1>
+
+                <ul class="flex flex-col gap-1 md:gap-5">
+                    <li><a href="#">IOS & Android</a></li>
+                    <li><a href="#">Watch a Demo</a> </li>
+                    <li><a href="#">Customers</a> </li>
+                    <li><a href="#">API</a> </li>
+                </ul>
+                
+            </div>
+
+
+        </div>
+
+    </section>
+
+</body>
+</html>
